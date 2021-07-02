@@ -20,7 +20,7 @@ These are samples for using Python on Google App Engine Flexible Environment. Th
    cd <to directroy>
    virtualenv env
    env\Scripts\activate.ps1
-   pip install -r requirements.txt
+   pip install -r requirements.txt   OR    pip install --no-cache-dir -r requirements.txt
    python main.py
    http://127.0.0.1:8080/
    ```
