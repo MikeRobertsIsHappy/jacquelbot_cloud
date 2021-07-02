@@ -12,36 +12,25 @@ scaffolding for other frameworks and use cases.
 
 ## Run Locally
 
-Some samples have specific instructions. If there is a README in the sample folder, pleaese refer to it for any additional steps required to run the sample.
-
-In general, the samples typically require:
-
-1. Install the [Google Cloud SDK](https://cloud.google.com/sdk/), including the [gcloud tool](https://cloud.google.com/sdk/gcloud/), and [gcloud app component](https://cloud.google.com/sdk/gcloud-app).
-
-2. Setup the gcloud tool. This provides authentication to Google Cloud APIs and services.
+1. Clone this repo.
 
    ```
-   gcloud init
-   ```
-
-3. Clone this repo.
+   git clone https://github.com/MikeRobertsIsHappy/jacquelbot_cloud
 
    ```
-   git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
-   cd python-docs-samples/appengine/flexible
-   ```
 
-4. Open a sample folder, create a virtualenv, install dependencies, and run the sample:
+2. Open a sample folder, create a virtualenv, install dependencies, and run the sample:
 
    ```
-   cd hello-world
+   cd <to directroy>
    virtualenv env
    env\Scripts\activate.ps1
    pip install -r requirements.txt
    python main.py
+   http://127.0.0.1:8080/
    ```
 
-5. Visit the application at [http://localhost:8080](http://localhost:8080).
+3. Visit the application at [http://localhost:8080](http://localhost:8080).
 
 
 ## Deploying
@@ -63,11 +52,3 @@ Some samples in this repositories may have special deployment instructions. Refe
    ```
 
 4. Congratulations!  Your application is now live at `your-app-id.appspot.com`
-
-## Contributing changes
-
-* See [CONTRIBUTING.md](../CONTRIBUTING.md)
-
-## Licensing
-
-* See [LICENSE](../LICENSE)

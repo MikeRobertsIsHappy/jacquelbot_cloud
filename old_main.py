@@ -14,16 +14,17 @@
 
 # [START gae_flex_quickstart]
 import logging
-from flask import Flask, render_template, request
-import jackalbot as jb
-from datetime import datetime
+
+from flask import Flask
+
 
 app = Flask(__name__)
 
 
-@app.route("/")
-def home():
-    return render_template("index.html")
+@app.route('/')
+def hello():
+    """Return a friendly HTTP greeting."""
+    return 'Hello World!'
 
 
 @app.errorhandler(500)
@@ -34,18 +35,9 @@ def server_error(e):
     See logs for full stacktrace.
     """.format(e), 500
 
-@app.route("/get")
-def get_bot_response():
-    user_input = request.args.get('msg')
-    bot_response = jb.jackalbot_response(user_input)
-    return bot_response
 
-if __name__ == "__main__":
-    now = datetime.now().strftime("%Y_%m_%d_%H_%M")
-    log_filename = 'jaques_logs/%s_log.txt' % now
-    logging.basicConfig(
-        filename=log_filename,
-        level=logging.INFO,
-        format='%(asctime)s.%(msecs)d %(levelname)-8s %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S')
+if __name__ == '__main__':
+    # This is used when running locally. Gunicorn is used to run the
+    # application on Google App Engine. See entrypoint in app.yaml.
     app.run(host='127.0.0.1', port=8080, debug=True)
+# [END gae_flex_quickstart]
