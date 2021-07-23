@@ -17,10 +17,11 @@ These are samples for using Python on Google App Engine Flexible Environment. Th
 2. Open a sample folder, create a virtualenv, install dependencies, and run the sample:
 
    ```
+n
    cd <to directroy>
-   virtualenv env
+   virtualenv env  # for first time
    env\Scripts\activate.ps1
-   pip install -r requirements.txt   OR    pip install --no-cache-dir -r requirements.txt
+   pip install -r requirements.txt   OR    pip install --no-cache-dir -r requirements.txt    # for first time
    python main.py
    http://127.0.0.1:8080/
    ```
