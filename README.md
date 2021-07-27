@@ -26,7 +26,7 @@ n
    http://127.0.0.1:8080/
    ```
 
-3. Visit the application at [http://localhost:8080](http://localhost:8080).
+3. Visit the application at  http://127.0.0.1:8080/.
 
 
 ## Deploying
